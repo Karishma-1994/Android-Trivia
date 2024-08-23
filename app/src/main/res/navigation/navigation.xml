@@ -44,11 +44,22 @@
         android:name="com.example.androidtrivia.GameWonFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_game_won">
+
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment" />
+
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+
     </fragment>
+
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.androidtrivia.AboutFragment"
